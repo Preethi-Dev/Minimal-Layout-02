@@ -1,5 +1,138 @@
 /* Resets */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* Fonts */
+@font-face {
+  font-family: "Avenir Roman";
+  src: url("./assets/fonts/AvenirLTStd-Roman.otf");
+}
+
 /* Variables */
+:root {
+  --primary: #252525;
+  --secondary: #ffffff;
+}
+
 /* Base Styles */
+body {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+body * {
+  font-family: "Avenir Roman";
+  font-style: normal;
+}
+
+a {
+  color: var(--primary);
+}
+
+img {
+  max-width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  max-width: 440px;
+}
+
+.content h1 {
+  font-weight: 800;
+  font-size: 3.5rem;
+}
+
+.content p {
+  font-weight: 400;
+  font-size: 1.625rem;
+  color: rgba(37, 37, 37, 0.8);
+}
+
+.content a {
+  font-size: 1.125rem;
+  color: var(--secondary);
+  background-color: var(--primary);
+
+  padding: 1rem 2rem;
+  align-self: flex-start;
+  border-radius: 1rem;
+}
+
+.cards .card p {
+  font-weight: 800;
+  color: rgba(37, 37, 37, 0.25);
+}
+
 /* Mobile Styles */
+.intro,
+.cards {
+  padding: 1rem;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.intro .images,
+.cards {
+  display: flex;
+  gap: 1rem;
+}
+
+.cards .card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cards .card p {
+  font-size: 2rem;
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 900px) {
+  .intro,
+  .cards {
+    padding: 2.5rem;
+    justify-content: center;
+  }
+
+  .intro {
+    flex-direction: row;
+  }
+
+  .intro .images .image:nth-child(2) {
+    align-self: flex-end;
+  }
+}
+
+/* Laptop Styles */
+@media screen and (min-width: 1200px) {
+  .intro .content {
+    align-self: center;
+  }
+
+  .intro .images .image:nth-child(2) {
+    margin-top: 5rem;
+  }
+
+  .cards,
+  .intro .images {
+    gap: 2.5rem;
+  }
+}
