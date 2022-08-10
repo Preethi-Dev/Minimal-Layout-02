@@ -71,6 +71,12 @@ img {
   border-radius: 1rem;
 }
 
+.cards .card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .cards .card p {
   font-weight: 800;
   color: rgba(37, 37, 37, 0.25);
@@ -94,12 +100,6 @@ img {
   gap: 1rem;
 }
 
-.cards .card {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
 .cards .card p {
   font-size: 2rem;
 }
@@ -116,6 +116,10 @@ img {
     flex-direction: row;
   }
 
+  .intro .content {
+    align-self: center;
+  }
+
   .intro .images .image:nth-child(2) {
     align-self: flex-end;
   }
@@ -123,10 +127,6 @@ img {
 
 /* Laptop Styles */
 @media screen and (min-width: 1200px) {
-  .intro .content {
-    align-self: center;
-  }
-
   .intro .images .image:nth-child(2) {
     margin-top: 5rem;
   }
